@@ -7,9 +7,10 @@ import { useDebounce } from './hooks';
 import { GIFObject } from './types';
 
 const GIPHY_SECRET: string = 'Z5xPIBDufh2ONodT4tRKapOkvRsGh0B0'; // TODO: move this to .env file
+const initialSearch: string = 'Cute Dog';
 
 function App() {
-    const [searchTerm, setSearchTerm] = useState('');
+    const [searchTerm, setSearchTerm] = useState(initialSearch);
     const [results, setResults] = useState<GIFObject[]>([]);
     const [isSearching, setIsSearching] = useState<boolean>(false);
 
@@ -38,9 +39,8 @@ function App() {
         <div>
             <Banner />
             <Input
-                label="Giphy Search Term"
                 name="giphySearch"
-                placeholder="Do"
+                placeholder={initialSearch}
                 onChange={(e) => setSearchTerm(e.target.value)}
             />
 

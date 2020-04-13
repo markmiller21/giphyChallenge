@@ -1,6 +1,6 @@
 import React from 'react';
 import { GIFObject } from '../../types';
-import { GifContainer, GifText } from './GiphyCard.styled';
+import { GifContainer } from './GiphyCard.styled';
 
 // TODOs: click state, hover state & box shadow
 export const GiphyCard = (gif: GIFObject) => (
@@ -10,6 +10,5 @@ export const GiphyCard = (gif: GIFObject) => (
             src={`http://media.giphy.com/media/${gif.id}/giphy.gif`}
             alt={gif.title} // Ideally this is a better alt tag
         />
-        <GifText>{gif.title}</GifText>
     </GifContainer>
 );
