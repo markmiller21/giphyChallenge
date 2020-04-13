@@ -12,9 +12,9 @@ const initialSearch: string = 'Cute Dog';
 function App() {
     const [searchTerm, setSearchTerm] = useState(initialSearch);
     const [results, setResults] = useState<GIFObject[]>([]);
-    const [isSearching, setIsSearching] = useState<boolean>(false);
+    const [isSearching, setIsSearching] = useState<boolean>(true); // This starts as true because I prepopulate a search for the user
 
-    const debouncedSearchTerm = useDebounce(searchTerm, 300);
+    const debouncedSearchTerm = useDebounce(searchTerm, 500); // 500 millisecond debounce "felt right" after playing around with the app
 
     useEffect(() => {
         async function fetchGifs() {
@@ -46,14 +46,14 @@ function App() {
             />
 
             {isSearching && !results && (
-                <div>
+                <>
                     <p>Searching ...</p>
                     <Spinner />
-                </div>
+                </>
             )}
 
             {!isSearching && results.length === 0 && (
-                <div>no results found</div>
+                <h2>No results found. Please try another search</h2>
             )}
 
             {results && (
