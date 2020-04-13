@@ -1,3 +1,23 @@
+# This project was created as a code challenge for Crypsis Group.
+
+## Challenge instructions: 
+
+Create a basic React "app" that allows the user to search for animated gifs using the giphy API (https://developers.giphy.com/docs/api) and displays a list / or table with the results.
+
+The create-react-app can be used as a starter skeleton. Use your favorite libraries to fetch data or render the list, or create your own. 
+
+The results should be posted on GitHub
+
+## Future additions?
+
+* Add a scroll listener to fetch more gifs as the user scrolls
+* Style the GIF itself better
+* Explore css grid to allow gifs more height if they need it
+* Better GIF loading state -- loading state for search :white_check_mark, but need one for GIF
+* Play around in React Profiler for any easy optimizations
+
+# Create React App Boilerplate ReadMe
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
