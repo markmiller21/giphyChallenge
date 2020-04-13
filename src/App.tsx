@@ -45,6 +45,9 @@ function App() {
             />
 
             {isSearching && !results && <div>Searching ...</div>}
+            {!isSearching && results.length === 0 && (
+                <div>no results found</div>
+            )}
             {results && (
                 <ResultsContainer>
                     {results.map((gif) => (

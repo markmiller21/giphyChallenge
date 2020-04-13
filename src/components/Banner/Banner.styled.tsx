@@ -7,6 +7,5 @@ export const BannerWrapper = styled.div`
 `;
 
 export const LogoText = styled.h1`
-    font-size: 24px;
     margin-left: 12px;
 `;

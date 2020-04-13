@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { InputField, Label } from './Input.styled';
+import { InputField } from './Input.styled';
 
 interface InputI {
     name: string;
